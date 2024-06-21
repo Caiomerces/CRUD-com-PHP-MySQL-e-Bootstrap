@@ -6,6 +6,8 @@
     <title>Cadastro de Cliente</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link href="../public/css/style.css" rel="stylesheet">
 </head>
 <body>
     <div class="container mt-5">
@@ -23,7 +25,7 @@
                 <label for="telefone">Telefone:</label>
                 <input type="text" id="telefone" name="telefone" class="form-control">
             </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" id="btn-enviar" class="btn btn-primary">Cadastrar</button>
         </form>
         <h2 class="mt-5">Gerenciamento de Clientes</h2>
         <div class="btn-group" role="group">
