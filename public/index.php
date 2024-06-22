@@ -29,9 +29,8 @@
         </form>
         <h2 class="mt-5">Gerenciamento de Clientes</h2>
         <div class="btn-group" role="group">
-            <button class="btn btn-secondary" onclick="window.location.href='listar-clientes.php'">Listar Clientes</button>
-            <button class="btn btn-secondary" onclick="window.location.href='cadastrar-cliente.html'">Cadastrar Cliente</button>
-            <button class="btn btn-secondary" onclick="window.location.href='editar-cliente.php'">Editar Cliente</button>
+            <button class="btn btn-secondary" onclick="window.location.href='../public/listar-cliente.php'">Listar Clientes</button>
+            <button class="btn btn-secondary" onclick="window.location.href='../editar-cliente.php'">Editar Cliente</button>
             <button class="btn btn-secondary" onclick="window.location.href='excluir-cliente.php'">Excluir Cliente</button>
         </div>
     </div>
