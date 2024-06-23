@@ -6,14 +6,15 @@ class Cliente {
         $this->pdo = $pdo;
     }
 
-    public function cadastrar($nome, $email, $telefone) {
+    public function cadastrar($nome, $email, $confirmarEmail, $senha) {
         try {
             // Preparar a query SQL para inserir o cliente
-            $sql = "INSERT INTO clientes (nome, email, telefone) VALUES (:nome, :email, :telefone)";
+            $sql = "INSERT INTO clientes (nome, email, confirmarEmail, senha) VALUES (:nome, :email, :confirmarEmail, :senha)";
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-            $stmt->bindParam(':telefone', $telefone, PDO::PARAM_STR);
+            $stmt->bindParam(':confirmarEmail', $confirmarEmail, PDO::PARAM_STR);
+            $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
             $stmt->execute();
 
             // Exibir mensagem de sucesso
@@ -23,5 +24,6 @@ class Cliente {
             echo "Erro ao cadastrar usuário: " . $e->getMessage();
         }
     }
+
 }
 ?>

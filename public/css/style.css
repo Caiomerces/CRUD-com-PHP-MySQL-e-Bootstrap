@@ -1,7 +1,6 @@
 /* Definição do charset UTF-8 para garantir correta interpretação dos caracteres */
 @charset "UTF-8";
 
-/* Estilo para adicionar margem superior ao botão */
 #btn-enviar{
     margin-top: 10px; /* Ajuste o valor conforme necessário */
 }

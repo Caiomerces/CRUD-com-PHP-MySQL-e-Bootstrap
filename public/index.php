@@ -22,16 +22,19 @@
                 <input type="email" id="email" name="email" class="form-control">
             </div>
             <div class="form-group">
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" name="telefone" class="form-control">
+                <label for="confirmarEmail">Confirmar email:</label>
+                <input type="email" id="confirmarEmail" name="confirmarEmail" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" class="form-control">
             </div>
             <button type="submit" id="btn-enviar" class="btn btn-primary">Cadastrar</button>
         </form>
         <h2 class="mt-5">Gerenciamento de Clientes</h2>
         <div class="btn-group" role="group">
-            <button class="btn btn-secondary" onclick="window.location.href='../public/listar-cliente.php'">Listar Clientes</button>
-            <button class="btn btn-secondary" onclick="window.location.href='../editar-cliente.php'">Editar Cliente</button>
-            <button class="btn btn-secondary" onclick="window.location.href='excluir-cliente.php'">Excluir Cliente</button>
+            <button class="btn btn-secondary" onclick="window.location.href='../public/pesquisar-cadastro.php'">Pesquisar cadastro</button>
+            <button class="btn btn-secondary" onclick="window.location.href='../public/cadastrar-cliente.php'">Cadastrar usuário</button>
         </div>
     </div>
 
