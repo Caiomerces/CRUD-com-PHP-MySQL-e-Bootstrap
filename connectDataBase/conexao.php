@@ -1,5 +1,4 @@
 <?php
-// config/conexao.php
 
 $host = "localhost";
 $dbname = "cadastrodeclientes";
