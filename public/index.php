@@ -13,6 +13,9 @@
     <div class="container mt-5">
         
         <h1>Bem vindo ao sistema de cadastro de usuários</h1>
+        <div>
+            <a class="btn btn-danger" href="/crud-com-php-mysql-e-bootstrap/public/login.php">Sair</a>
+        </div>
     </div>
     <div class="container mt-5">
         <h2>Cadastre um usuário</h2>
@@ -38,7 +41,7 @@
         <h2 class="mt-5">Gerenciamento de Usuários</h2>
         <div class="btn-group" role="group">
             <button class="btn btn-secondary" onclick="window.location.href='../public/pesquisar-cadastro.php'">Pesquisar ou excluir cadastro</button>
-           
+ 
         </div>
     </div>
 
