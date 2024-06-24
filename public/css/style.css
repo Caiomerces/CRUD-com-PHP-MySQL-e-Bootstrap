@@ -1,6 +1,9 @@
-/* Definição do charset UTF-8 para garantir correta interpretação dos caracteres */
-@charset "UTF-8";
 
 #btn-enviar{
     margin-top: 10px; /* Ajuste o valor conforme necessário */
+    margin-bottom: 0px;
+}
+
+.custom-button-pesquisar-excluir{
+    margin-bottom: 20px;
 }
