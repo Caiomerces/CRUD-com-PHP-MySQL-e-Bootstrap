@@ -91,14 +91,18 @@
 
             $sql = "SELECT * FROM clientes WHERE email = '$email' ";
             $result = mysqli_query($conn, $sql);
-
+            session_start();
             #Retornar registros encontrados na tabela
             if (mysqli_num_rows($result) > 0 ) {
                $row = mysqli_fetch_assoc($result);
                $emailSQL = $row['email'];
                $senhaSQL = $row['senha'];
                if ($senha == $senhaSQL) {
-
+                // Redirecionando para o site principal           
+                $_SESSION["email"] = $emailSQL;
+                $_SESSION["senha"] = $senhaSQL;
+                header("Location: ./index.php");
+                exit;
                } else {
                 echo'<!DOCTYPE html>
 <html lang="pt-br">
@@ -334,5 +338,5 @@
 </html>';
     }
 
-
+misqli_close($conn);
 ?>
