@@ -337,6 +337,5 @@
 </body>
 </html>';
     }
-
-misqli_close($conn);
+mysqli_close($conn);
 ?>

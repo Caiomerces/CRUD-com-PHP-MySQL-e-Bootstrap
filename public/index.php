@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="custom-gerenciamento-usuarios">Bem vindo ao sistema de cadastro de usuários</h1>
+        <h1>Bem vindo ao sistema de cadastro de usuários</h1>
         <div>
             <a class="btn btn-danger" href="/crud-com-php-mysql-e-bootstrap/public/login.php">Sair</a>
         </div>
