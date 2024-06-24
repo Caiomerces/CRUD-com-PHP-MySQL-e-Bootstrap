@@ -11,7 +11,11 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2>Cadastro de Cliente</h2>
+        
+        <h1>Bem vindo ao sistema de cadastro de usuários</h1>
+    </div>
+    <div class="container mt-5">
+        <h2>Cadastre um usuário</h2>
         <form method="post" action="cadastrar-cliente.php">
             <div class="form-group">
                 <label for="nome">Nome:</label>
@@ -31,10 +35,10 @@
             </div>
             <button type="submit" id="btn-enviar" class="btn btn-primary">Cadastrar</button>
         </form>
-        <h2 class="mt-5">Gerenciamento de Clientes</h2>
+        <h2 class="mt-5">Gerenciamento de Usuários</h2>
         <div class="btn-group" role="group">
-            <button class="btn btn-secondary" onclick="window.location.href='../public/pesquisar-cadastro.php'">Pesquisar cadastro</button>
-            <button class="btn btn-secondary" onclick="window.location.href='../public/cadastrar-cliente.php'">Cadastrar usuário</button>
+            <button class="btn btn-secondary" onclick="window.location.href='../public/pesquisar-cadastro.php'">Pesquisar ou excluir cadastro</button>
+           
         </div>
     </div>
 
