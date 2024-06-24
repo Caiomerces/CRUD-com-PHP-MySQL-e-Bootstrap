@@ -85,18 +85,13 @@ require '../public/classes/Cliente.php';
             <label for="senha">Senha: </label>
             <input type="text" name="senha" value="<?php echo $senha; ?>"> <br><br>
 
-            
-            <!-- <a href="../public/index.php" class="btn btn-primary">Voltar</a> -->
-            <!-- Formulário de exclusão de cadastro -->
-            <div style="display: flex; gap: 10px;" >
             <input type="submit" class="btn btn-secondary" value="Atualizar">
-                <form action="../public/delete-cadastro.php" method="post" style="margin-top: 20px;">
-                    <input type="hidden" name="id" value="<?php echo $id; ?>">
-                    <input type="submit" class="btn btn-danger" value="Excluir" >
-                </form>
-            </div>
+            
         </form>   
-        
+        <form action="../public/delete-cadastro.php" method="post" style="margin-top: 20px;">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <input type="submit" class="btn btn-danger" value="Excluir">
+        </form>
        
     </div>
     <?php } else { ?> 
@@ -116,19 +111,13 @@ require '../public/classes/Cliente.php';
             <label for="senha">Senha: </label>
             <input type="text" name="senha" placeholder ="Senha" disabled> <br><br>
 
-          
-             <!-- Formulário de exclusão de cadastro -->
-            <div style="display: flex; gap: 10px;" >
             <input type="submit" class="btn btn-secondary" value="Atualizar" disabled>
-                <form action="../public/delete-cadastro.php" method="post" style="margin-top: 20px;" disabled>
-                    <input type="hidden" name="id" value="<?php echo $id; ?>" disabled>
-                    <input type="submit" class="btn btn-danger" value="Excluir" disabled>
-                </form>
-            </div>
-        
-
-        </form>   
-
+             <!-- Formulário de exclusão de cadastro -->
+        </form>              
+        <form action="../public/delete-cadastro.php" method="post" style="margin-top: 20px;" disabled>
+               <input type="hidden" name="id" value="<?php echo $id; ?>" disabled>
+               <input type="submit" class="btn btn-danger" value="Excluir" disabled>
+        </form>
          
     <?php } ?>
     
