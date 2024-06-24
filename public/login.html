@@ -21,7 +21,7 @@
 <body class="text-center">
     <div class="container mt-5">
         <form method="post" class="form-signin" action="login.php">
-            <img class="mb-4" src="img/logo.png" alt="" width="72" height="72">
+        
             <h1 class="h3 mb-3 fw-normal">Faça login</h1>
 
             <div class="form-floating mb-3">
@@ -39,19 +39,37 @@
                     <input type="checkbox" value="remember-me"> Lembrar de mim
                 </label>
             </div>
-
             <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
-            <p class="mt-5 mb-3 text-muted">&copy; David Barreto - 2023</p>
         </form>
     </div>
-    <!-- Modal -->
-    <div id ="modal"class="modal-dialog modal-dialog-centered">
-        ...
+     <!-- Modal -->
+     <div id="modal" class="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Voltar</button>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <!-- Bootstrap JS e outros scripts -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        // Mostrar o modal
+        var modal = new bootstrap.Modal(document.getElementById('modal'), {keyboard: false});
+        backdrop:'static',
+        modal.show();
+    </script>
 </body>
 </html>
