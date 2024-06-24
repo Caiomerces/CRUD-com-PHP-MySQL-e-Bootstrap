@@ -7,12 +7,11 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS Personalizado -->
-    <link href="../public/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <div class="container mt-5">
-        
-        <h1>Bem vindo ao sistema de cadastro de usuários</h1>
+        <h1 class="custom-gerenciamento-usuarios">Bem vindo ao sistema de cadastro de usuários</h1>
         <div>
             <a class="btn btn-danger" href="/crud-com-php-mysql-e-bootstrap/public/login.php">Sair</a>
         </div>
@@ -40,7 +39,7 @@
         </form>
         <h2 class="mt-5">Gerenciamento de Usuários</h2>
         <div class="btn-group" role="group">
-            <button class="btn btn-secondary" onclick="window.location.href='../public/pesquisar-cadastro.php'">Pesquisar ou excluir cadastro</button>
+            <button class="btn btn-secondary custom-button-pesquisar-excluir" onclick="window.location.href='../public/pesquisar-cadastro.php'">Pesquisar ou excluir cadastro</button>
  
         </div>
     </div>
