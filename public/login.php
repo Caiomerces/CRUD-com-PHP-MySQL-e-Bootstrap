@@ -82,7 +82,7 @@
         </script>
     </body>
     </html>');
-
+        
 
         } else {
             #Caputra de valores via POST
@@ -338,4 +338,5 @@
 </html>';
     }
 mysqli_close($conn);
+
 ?>
