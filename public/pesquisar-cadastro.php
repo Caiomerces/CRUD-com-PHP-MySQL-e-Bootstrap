@@ -1,12 +1,4 @@
 <?php
-// Incluir o arquivo da classe Cliente (se necessário)
-require '../public/classes/Cliente.php';
-
-//Zerar as variáveis
-    $nome = "";
-    $email = "";
-    $confirmarEmail = "";
-    $senha = "";
 
     if ($_SERVER ["REQUEST_METHOD"] == "POST"){
         #Tentar conectar com o banco
