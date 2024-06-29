@@ -12,8 +12,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $confirmarEmail = $_POST['confirmarEmail'];
         $senha = $_POST['senha'];
 
-        $sql = "INSERT INTO clientes (nome, email, confirmarEmail, senha) VALUES (:nome, :email, :confirmarEmail, :senha)";
+        // Verificar se o email já está cadastrado no banco de dados
+        $sql = "SELECT COUNT(*) AS total FROM clientes WHERE email = :email";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
+        if ($result['total'] > 0) {
+            echo "<script>alert('Erro ao cadastrar usuário: Email já cadastrado.'); window.location.href = 'cadastro.html';</script>";
+            exit();
+        }
+
+         // Inserir o novo usuário no banco de dados
+        $sql = "INSERT INTO clientes (nome, email, confirmarEmail, senha) VALUES (:nome, :email, :confirmarEmail, :senha)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
@@ -21,7 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
 
         $stmt->execute();
-
+        if ($confirmarEmail != $email) {
+            echo "<script>alert('O email e a confirmação de email não coincidem. Por favor, tente novamente.'); window.location.href = 'cadastro.html';</script>";
+            exit();
+        } 
+            // Verificar se o email já está cadastrado no banco de dados
+      
+        
         // Exibir mensagem de sucesso (opcional)
         echo '<!DOCTYPE html>
 <html lang="pt-br">
@@ -37,8 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <div class="container mt-5">
     <div class="alert alert-success">
-        <h2 class="h4 mb-2">Usuário inserido com sucesso!</h2>
-        <a href="index.php" class="btn btn-primary">Voltar</a>
+        <h2 class="h4 mb-2">Cadastrado com sucesso!</h2>
+        <a href="sistema.html" class="btn btn-primary">Voltar</a>
     </div>
 </div>
 
@@ -53,7 +71,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
-';
+';  
+    
     } catch (PDOException $e) {
         // Em caso de erro no cadastro, capturar a mensagem de erro
         $mensagem = "Erro ao cadastrar usuário: " . $e->getMessage();
