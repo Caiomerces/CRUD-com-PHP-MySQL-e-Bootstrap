@@ -29,7 +29,7 @@
                 if ($senha == $senhaPDO) {
                     session_start();    
                     $_SESSION['email'] = $emailPDO;
-                    header("Location: ./index.php");
+                    header("Location: ./sistema.html");
                 } else {
                     echo '<!DOCTYPE html>
     <html lang="pt-br">
